@@ -15,7 +15,8 @@ public class MenuDemo extends JFrame implements ActionListener{
 	MenuDemo(){
 		setTitle("메뉴 구성하기");
 		makeMenu();
-		setDefaultColoseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		System.out.println("test");
 		setSize(600, 400);
 		setVisible(true);
 	}
@@ -27,7 +28,7 @@ public class MenuDemo extends JFrame implements ActionListener{
 		JMenu m1 = new JMenu("파일");
 		m1.setMnemonic(KeyEvent.VK_F);
 		JMenu m2 = new JMenu("색상");
-		m2.setMneomic(KeyEvent.VK_C);
+		m2.setMnemonic(KeyEvent.VK_C);
 		item = new JMenuItem("새파일", KeyEvent.VK_N);
 		item.addActionListener(this);
 		m1.add(item);
@@ -45,7 +46,7 @@ public class MenuDemo extends JFrame implements ActionListener{
 		m2.add(item);
 		item = new JMenuItem("노란색");
 		key = KeyStroke.getKeyStroke(KeyEvent.VK_Y, ActionEvent.CTRL_MASK);
-		item.setAcelerator(key);
+		item.setAccelerator(key);
 		item.addActionListener(this);
 		m2.add(item);
 		mb.add(m1);
